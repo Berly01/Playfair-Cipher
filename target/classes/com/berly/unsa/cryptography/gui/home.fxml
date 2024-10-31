@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" minHeight="600.0" minWidth="700.0" spacing="20.0" xmlns="http://javafx.com/javafx/21.0.3" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.berly.unsa.cryptography.controller.HomeController">
+   <children>
+      <Label text="Playfair Cipher" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="155.0" prefWidth="660.0">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Input">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="inputMessage" prefHeight="250.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Output">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="outputMessage" editable="false" prefHeight="250.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label text="Key">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="inputKey" alignment="CENTER" prefHeight="41.0" prefWidth="600.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </TextField>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="33.0" prefWidth="660.0">
+         <children>
+            <RadioButton mnemonicParsing="false" text="I">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="tougleGroupOfRadioButtons" />
+               </toggleGroup>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="J" toggleGroup="$tougleGroupOfRadioButtons">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </RadioButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="61.0" prefWidth="600.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionEncrypt" prefHeight="100.0" prefWidth="100.0" text="Encrypt" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionDecrypt" prefHeight="100.0" prefWidth="100.0" text="Decrypt" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#onActionSeeMatrix" prefHeight="100.0" prefWidth="100.0" text="See Matrix">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
