@@ -28,9 +28,7 @@ public class HomeController {
 	@FXML private ToggleGroup tougleGroupOfRadioButtons;
 	
 	private Stage matrixStage = null;
-	
-	private PlayfairCipher playfairCipher = new PlayfairCipher();
-	
+		
 	private static final String EMPTY_RADIO_BUTTON = "Select one letter, I or J";
 	
 	private static final String EMPTY_KEY_OR_MESSAGE = "The message and key have to contain letters or white spaces";
@@ -52,9 +50,9 @@ public class HomeController {
 			String decryptedMessage;
 			
 			if (selectedLetter.compareTo(String.valueOf(PlayfairCipher.LETTER_I)) == 0) {
-				decryptedMessage = playfairCipher.decryptWithLetterI(message, key);
+				decryptedMessage = PlayfairCipher.decryptWithLetterI(message, key);
 			} else {
-				decryptedMessage = playfairCipher.decryptWithLetterJ(message, key);
+				decryptedMessage = PlayfairCipher.decryptWithLetterJ(message, key);
 			}
 			
 			outputMessage.setText(decryptedMessage);
@@ -86,9 +84,9 @@ public class HomeController {
 			String encryptedMessage;
 			
 			if (selectedLetter.compareTo(String.valueOf(PlayfairCipher.LETTER_I)) == 0) {
-				encryptedMessage = playfairCipher.encryptWithLetterI(message, key);
+				encryptedMessage = PlayfairCipher.encryptWithLetterI(message, key);
 			} else {
-				encryptedMessage = playfairCipher.encryptWithLetterJ(message, key);
+				encryptedMessage = PlayfairCipher.encryptWithLetterJ(message, key);
 			}
 					
 			outputMessage.setText(encryptedMessage);

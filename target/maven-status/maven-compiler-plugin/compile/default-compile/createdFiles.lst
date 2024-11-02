@@ -1,3 +1,4 @@
+com\berly\unsa\cryptography\model\AmscoCipher.class
 com\berly\unsa\cryptography\model\PlayfairCipher.class
 com\berly\unsa\cryptography\model\StringFormatException.class
 com\berly\unsa\cryptography\util\PlayfairString.class
